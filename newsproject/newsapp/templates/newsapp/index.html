@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>News</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+
+
+
+
+
+<link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+body{
+	font-family: 'Roboto', sans-serif;
+	}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+nav{
+	display: inline-block;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+nav img{
+	width:50px;
+}
+
+.nav-items ul{
+flex:1;
+align-items:center;
+text-align:center;
+}
+
+.nav-items ul li{
+list-style:none;
+display:inline-block;
+}
+
+
+    </style>
+  </head>
+
+
+
+<body>
+<div class="navbar-set">
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"><img src="https://cdn.pixabay.com/photo/2016/04/01/22/32/world-1301744_960_720.png" alt="">       Top News Today</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="nav-items" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"><a class="nav-link" href="#">Home<span class="sr-only"></span></a></li>
+      <li class="nav-item"><a class="nav-link" href="https://www1.oanda.com/currency/live-exchange-rates/">Exchange Rates Live</a></li>
+      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Share your ideas!</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Reviews</a>
+          <a class="dropdown-item" href="#">Innovative Ideas</a>
+        </div>
+      </li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Type anything" aria-label="Type anything">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+</div>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+ <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      	{%for title,description,image,url in news%}
+ 		<div class="col">
+          <div class="card shadow-sm">
+          	<img src="{{image}}" alt="news"/>
+
+            <div class="card-body">
+            	<a href="{{url}}"><h4 class="card-text">{{title}}</h4></a>
+              <p class="card-text">{{description}}</p>
+              <div class="d-flex justify-content-between align-items-center"></div>
+                <!--<div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>-->
+            </div>
+          </div>
+        </div>
+		  {%endfor%}
+    </div>
+</div>
+</div>
+</body>
+</html>
